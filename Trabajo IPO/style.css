@@ -1,0 +1,608 @@
+:root {
+    color-scheme: dark;
+
+    --negro: #0a0c0f;
+    --panel: #12161b;
+    --panel-2: #1b2128;
+    --linea: #5b6672;
+    --texto: #f2f4f6;
+    --suave: #c5ccd3;
+    --ambar: #ffb000;
+    --visitado: #d4b4ff;
+
+    --fuente-texto: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    --fuente-tecnica: ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace;
+}
+
+/* ########### Base ########### */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-padding-top: 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    margin: 0;
+    background: var(--negro);
+    color: var(--texto);
+    font-family: var(--fuente-texto);
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h4 {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-family: var(--fuente-tecnica);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ambar);
+}
+
+p,
+ul,
+ol,
+dl {
+    margin: 0 0 1.5rem;
+}
+
+p,
+li,
+dd {
+    max-width: 70ch;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+li::marker {
+    color: var(--ambar);
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* ########### Enlaces y foco ########### */
+a {
+    color: var(--ambar);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+}
+
+a:visited {
+    color: var(--visitado);
+}
+
+a:hover {
+    color: var(--texto);
+    text-decoration-thickness: 3px;
+}
+
+:focus-visible {
+    outline: 3px solid var(--texto);
+    outline-offset: 3px;
+}
+
+main:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* ########### Enlace para saltar al contenido ########### */
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -6rem;
+    z-index: 10;
+    padding: 0.75rem 1rem;
+    background: var(--ambar);
+    color: var(--negro);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.skip-link:visited {
+    color: var(--negro);
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* ########### Márgenes laterales########### */
+.site-header,
+.hero,
+main > section,
+.site-footer {
+    padding-inline: max(1rem, calc((100% - 82rem) / 2));
+}
+
+/* ########### Cabecera y menú ########### */
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 2rem;
+    padding-block: 0.5rem;
+    background: var(--negro);
+    border-bottom: 1px solid var(--linea);
+}
+
+.site-title {
+    margin: 0;
+    font-family: var(--fuente-tecnica);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.95rem;
+}
+
+.site-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-header li {
+    margin: 0;
+}
+
+.site-header a,
+.site-header a:visited {
+    display: inline-block;
+    min-height: 2.75rem;
+    padding: 0.55rem 0.25rem;
+    color: var(--texto);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+.site-header a:hover {
+    color: var(--ambar);
+    border-bottom-color: var(--ambar);
+}
+
+/* ########### Portada ########### */
+.hero {
+    display: grid;
+    gap: 1.25rem 3rem;
+    padding-block: 3rem 4rem;
+    align-items: center;
+}
+
+.hero > * {
+    margin: 0;
+}
+
+.eyebrow {
+    font-family: var(--fuente-tecnica);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--ambar);
+}
+
+h1 {
+    font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    overflow-wrap: anywhere;
+}
+
+.lead {
+    font-size: 1.35rem;
+    line-height: 1.55;
+}
+
+.fecha {
+    font-family: var(--fuente-tecnica);
+    font-size: 0.95rem;
+    color: var(--suave);
+}
+
+.hero h2 {
+    margin-top: 1.5rem;
+    font-family: var(--fuente-tecnica);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--suave);
+}
+
+.quick-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1.5rem;
+}
+
+.quick-facts div {
+    padding-top: 0.75rem;
+    border-top: 2px solid var(--ambar);
+}
+
+.quick-facts dt {
+    font-family: var(--fuente-tecnica);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--suave);
+}
+
+.quick-facts dd {
+    margin: 0.25rem 0 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+@media (min-width: 56rem) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    }
+
+    .hero > figure {
+        grid-column: 2;
+        grid-row: 1 / span 4;
+    }
+
+    .hero > :not(figure) {
+        grid-column: 1;
+    }
+
+    .hero > h2,
+    .hero > .quick-facts {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ########### Secciones ########### */
+main {
+    counter-reset: seccion;
+}
+
+main > section {
+    counter-increment: seccion;
+    padding-block: 4rem;
+    border-top: 1px solid var(--linea);
+}
+
+main > section:nth-of-type(even) {
+    background: var(--panel);
+}
+
+main > section > h2 {
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+
+main > section > h2::before {
+    content: "";
+    content: counter(seccion, decimal-leading-zero) / "";
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: var(--fuente-tecnica);
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    color: var(--ambar);
+}
+
+
+@media (min-width: 64rem) {
+    main > section {
+        grid-template-columns: 15rem minmax(0, 1fr);
+        column-gap: 3rem;
+        display: grid;
+    }
+
+    main > section > h2 {
+        grid-column: 1;
+        grid-row: 1 / span 40;
+        position: sticky;
+        top: 2rem;
+        align-self: start;
+        margin-bottom: 0;
+        font-size: 1.05rem;
+    }
+
+    main > section > :not(h2) {
+        grid-column: 2;
+    }
+}
+
+article {
+    margin-bottom: 3.5rem;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+/* ########### Imágenes grandes ########### */
+figure {
+    margin: 2rem 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    background: var(--panel-2);
+}
+
+figcaption {
+    margin-top: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--ambar);
+    font-size: 0.95rem;
+    color: var(--suave);
+}
+
+/* Texto a un lado y foto al otro */
+.con-imagen figure {
+    max-width: 36rem;
+}
+
+@media (min-width: 75rem) {
+    .con-imagen {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        column-gap: 3rem;
+        align-items: start;
+    }
+
+    .con-imagen > :not(figure) {
+        grid-column: 1;
+    }
+
+    .con-imagen > figure {
+        grid-column: 2;
+        grid-row: 1 / span 4;
+        margin: 0;
+        max-width: none;
+    }
+}
+
+/* Fotos de la galería: la grande arriba y la otra debajo, a su lado si hay sitio */
+.fotos figure:first-of-type {
+    margin-top: 0;
+}
+
+@media (min-width: 75rem) {
+    .fotos {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+        column-gap: 2rem;
+        align-items: start;
+    }
+
+    .fotos > h3 {
+        grid-column: 1 / -1;
+    }
+
+    .fotos figure {
+        margin: 0;
+    }
+}
+
+/* ########### Notas, destacados y definiciones ########### */
+.note,
+aside {
+    margin: 1.5rem 0;
+    padding: 1.25rem 1.5rem;
+    background: var(--panel-2);
+    border-left: 6px solid var(--ambar);
+}
+
+.note p:last-child,
+aside ul:last-child {
+    margin-bottom: 0;
+}
+
+main > section > aside {
+    margin-bottom: 3.5rem;
+}
+
+mark {
+    padding: 0 0.3em;
+    background: var(--ambar);
+    color: var(--negro);
+    font-weight: 700;
+}
+
+dfn {
+    font-style: normal;
+    font-weight: 700;
+}
+
+abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+dt {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+dd {
+    margin-left: 1.5rem;
+}
+
+.quick-facts dd {
+    margin-left: 0;
+}
+
+sup a {
+    padding: 0 0.15em;
+    font-weight: 700;
+}
+
+/* ########### Tablas ########### */
+.tabla-scroll {
+    overflow-x: auto;
+    margin: 1rem 0 1.5rem;
+    border: 1px solid var(--linea);
+}
+
+.tabla-scroll table {
+    min-width: 42rem;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    margin: 1rem 0 1.5rem;
+    border-collapse: collapse;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+caption {
+    padding: 0.75rem 0;
+    text-align: left;
+    font-family: var(--fuente-tecnica);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--suave);
+}
+
+.tabla-scroll caption {
+    padding-inline: 0.75rem;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--linea);
+    text-align: left;
+    vertical-align: top;
+}
+
+thead th {
+    background: var(--texto);
+    color: var(--negro);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+tbody th {
+    background: var(--panel-2);
+}
+
+tbody td {
+    background: var(--negro);
+}
+
+main > section:nth-of-type(even) tbody td {
+    background: var(--panel);
+}
+
+/* ########### Preguntas frecuentes ########### */
+details {
+    margin-bottom: 0.75rem;
+    background: var(--panel-2);
+    border: 1px solid var(--linea);
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 2.75rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "+";
+    content: "+" / "";
+    font-family: var(--fuente-tecnica);
+    font-size: 1.5rem;
+    color: var(--ambar);
+}
+
+details[open] summary::after {
+    content: "–";
+    content: "–" / "";
+}
+
+summary:hover {
+    background: var(--negro);
+}
+
+details p {
+    margin: 0;
+    padding: 0.5rem 1rem 1rem;
+}
+
+/* ########### Pie de página ########### */
+.site-footer {
+    padding-block: 3rem;
+    background: var(--negro);
+    border-top: 1px solid var(--linea);
+    color: var(--suave);
+}
+
+.site-footer p,
+.site-footer address {
+    margin: 0 0 0.5rem;
+}
+
+.site-footer p {
+    font-family: var(--fuente-tecnica);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
