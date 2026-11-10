@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Trabajo de IPO sobre el Dot Pad X, una pantalla táctil de braille y gráficos en relieve.">
+        <meta name="author" content="Álvaro Pascual García">
+        <meta name="color-scheme" content="dark">
+        <meta name="theme-color" content="#0a0c0f">
+        <title>Dot Pad X | Álvaro Pascual García</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body id="inicio">
+        <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+        <header class="site-header">
+            <p class="site-title">Trabajo de IPO</p>
+            <nav aria-label="Secciones de la página">
+                <ul>
+                    <li><a href="#contexto">Contexto</a></li>
+                    <li><a href="#funcionamiento">Funcionamiento</a></li>
+                    <li><a href="#evolucion">Evolución</a></li>
+                    <li><a href="#fuentes">Fuentes</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="contenido" tabindex="-1">
+
+            <header class="hero">
+                <p class="eyebrow">Dispositivo de hardware · Accesibilidad</p>
+                <h1>Dot Pad X</h1>
+                <p class="lead">
+                    Una pantalla que convierte texto, gráficos y diagramas en relieve que se puede tocar.
+                    Cambia la forma en que una persona ciega usa un ordenador o un móvil.
+                </p>
+                <p class="fecha">
+                    Presentado por Dot Inc. el
+                    <time datetime="2025-11-10">10 de noviembre de 2025</time>.
+                </p>
+
+                <figure>
+                    <picture>
+                        <source type="image/webp" srcset="imagenes/vista_casicenital.webp">
+                        <img src="imagenes/vista_casicenital.png" width="1000" height="667"
+                             alt="Dot Pad X en perspectiva sobre un fondo claro: carcasa negra con una zona grande de pines, una fila de botones y una línea de braille.">
+                    </picture>
+                    <figcaption>El Dot Pad X en perspectiva: zona de pines, botones y línea de braille.</figcaption>
+                </figure>
+
+                <h2>Ficha rápida</h2>
+                <dl class="quick-facts">
+                    <div>
+                        <dt>Fabricante</dt>
+                        <dd>Dot Inc. (Corea del Sur)</dd>
+                    </div>
+                    <div>
+                        <dt>Tipo</dt>
+                        <dd>Pantalla táctil de braille y gráficos</dd>
+                    </div>
+                    <div>
+                        <dt>Zona de gráficos</dt>
+                        <dd>300 celdas</dd>
+                    </div>
+                    <div>
+                        <dt>Línea de braille</dt>
+                        <dd>20 celdas</dd>
+                    </div>
+                    <div>
+                        <dt>Peso</dt>
+                        <dd>1,2 kg</dd>
+                    </div>
+                    <div>
+                        <dt>Garantía</dt>
+                        <dd>2 años</dd>
+                    </div>
+                </dl>
+            </header>
+
+            <section id="contexto">
+                <h2>Contexto</h2>
+
+                <article class="con-imagen">
+                    <h3>¿Qué es el Dot Pad X?</h3>
+                    <p>
+                        El <strong>Dot Pad X</strong> es un dispositivo que se conecta a un ordenador, una tableta
+                        o un móvil y dibuja lo que hay en pantalla con pequeños pines que suben y bajan.
+                        La información deja de ser solo visual o sonora y se puede <em>tocar</em>.
+                        Tiene dos zonas: una superficie de <strong>300 celdas</strong> para gráficos y braille
+                        en varias líneas, y una fila de <strong>20 celdas</strong> de braille para leer texto
+                        <sup><a href="#fuente-1" aria-label="Fuente 1">[1]</a></sup>.
+                    </p>
+                    <p>
+                        Dot Inc. lo presentó a finales de 2025 como mejora de su modelo anterior, el Dot Pad 320A
+                        <sup><a href="#fuente-3" aria-label="Fuente 3">[3]</a></sup>. Es un hardware reciente y por eso encaja bien en la
+                        asignatura de <abbr title="Interacción Persona–Ordenador">IPO</abbr>.
+                    </p>
+
+                    <figure>
+                        <img src="imagenes/vista_cenital.png" width="600" height="479" loading="lazy"
+                             alt="Dot Pad X visto desde arriba sobre una pared clara: la zona de pines arriba, una fila de botones en medio y la línea de braille debajo.">
+                        <figcaption>Vista desde arriba: gráficos arriba, botones en medio y braille debajo.</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h3>El problema que intenta resolver</h3>
+                    <p>
+                        Casi todas las interfaces son gráficas: iconos, tablas, gráficas, mapas… Una persona ciega
+                        suele usar un lector de pantalla, que lo convierte todo en voz o en una sola línea de
+                        braille. Eso funciona bien con texto, pero no con lo que depende del espacio: la forma de
+                        una figura, la posición de un punto o cómo está organizada una hoja de cálculo.
+                    </p>
+
+                    <aside class="note">
+                        <h4>Idea de IPO: los golfos de Norman</h4>
+                        <p>
+                            Donald Norman habla de dos distancias entre la persona y el sistema: el
+                            <dfn>golfo de ejecución</dfn> (cómo consigo que el sistema haga lo que quiero) y el
+                            <dfn>golfo de evaluación</dfn> (cómo sé qué ha pasado). Con solo voz o una línea
+                            braille, el golfo de evaluación es muy grande para cualquier contenido espacial. El
+                            Dot Pad X lo reduce porque deja explorar el contenido directamente con las manos.
+                        </p>
+                    </aside>
+                </article>
+
+                <article>
+                    <h3>Qué interacción cambia</h3>
+                    <ul>
+                        <li><strong>Un canal nuevo.</strong> Se añade el tacto en dos dimensiones, además de la voz y el braille de una fila.</li>
+                        <li><strong>Exploración libre.</strong> La persona recorre la imagen a su ritmo y puede volver a un punto concreto.</li>
+                        <li><strong>Respuesta inmediata.</strong> Si el contenido cambia en pantalla, el relieve cambia también.</li>
+                        <li><strong>Varios canales a la vez.</strong> Se puede combinar con la voz del lector de pantalla y con los botones del aparato.</li>
+                        <li><strong>Más autonomía.</strong> Se depende menos de material preparado por otras personas.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Glosario</h3>
+                    <dl>
+                        <dt>Celda braille</dt>
+                        <dd>Grupo de puntos en relieve que representa una letra o un símbolo.</dd>
+
+                        <dt>Gráficos táctiles</dt>
+                        <dd>Imágenes, mapas o diagramas hechos en relieve para explorarlos con las manos.</dd>
+
+                        <dt>Lector de pantalla</dt>
+                        <dd>Programa que cuenta lo que hay en pantalla con voz o braille. Por ejemplo, <abbr title="Job Access With Speech">JAWS</abbr>, <abbr title="NonVisual Desktop Access">NVDA</abbr> y VoiceOver.</dd>
+
+                        <dt>Háptico</dt>
+                        <dd>Relacionado con el sentido del tacto como forma de comunicarse con un sistema.</dd>
+                    </dl>
+                </article>
+            </section>
+
+            <section id="funcionamiento">
+                <h2>Funcionamiento</h2>
+
+                <article class="con-imagen">
+                    <h3>Cómo se usa</h3>
+                    <ol>
+                        <li>Se enciende y se conecta al equipo por Bluetooth LE o con un cable USB-C.</li>
+                        <li>El lector de pantalla o la aplicación Dot Apps le manda el contenido: texto, una imagen, una gráfica o un documento.</li>
+                        <li>Los pines de la zona de 300 celdas suben para formar el relieve y la fila de 20 celdas muestra el texto en braille.</li>
+                        <li>La persona explora con las manos y usa los botones para acercar, mover, girar o invertir lo que está tocando <sup><a href="#fuente-1" aria-label="Fuente 1">[1]</a></sup>.</li>
+                        <li>Cuando el contenido cambia, los pines se actualizan.</li>
+                    </ol>
+
+                    <figure>
+                        <img src="imagenes/pantalla_activa.jpeg" width="559" height="559" loading="lazy"
+                             alt="Primer plano de la zona de pines del Dot Pad X con un mapamundi formado por puntos blancos; debajo se ven los botones y la línea de braille.">
+                        <figcaption>Un mapamundi mostrado en la zona de gráficos.</figcaption>
+                    </figure>
+                </article>
+
+                <article>
+                    <h3>Características y beneficios</h3>
+
+                    <div class="tabla-scroll" role="region" aria-labelledby="cap-caracteristicas" tabindex="0">
+                        <table>
+                            <caption id="cap-caracteristicas">Qué hace cada característica, para qué sirve y cómo se relaciona con la IPO</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Característica</th>
+                                    <th scope="col">Qué hace</th>
+                                    <th scope="col">Beneficio</th>
+                                    <th scope="col">Relación con la IPO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Doble pantalla: 300 + 20 celdas</th>
+                                    <td>Separa la zona de gráficos de la fila de texto.</td>
+                                    <td>Se puede mirar una imagen y leer texto sin cambiar de aparato.</td>
+                                    <td>Salida multimodal.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Relieve en tiempo real</th>
+                                    <td>Actualiza los pines rápido cuando cambia el contenido.</td>
+                                    <td>Se puede seguir una gráfica o una hoja de cálculo mientras se trabaja.</td>
+                                    <td>Retroalimentación inmediata.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Compatibilidad</th>
+                                    <td>Funciona con iOS, iPadOS, macOS, visionOS y Windows con JAWS, y también con NVDA y VoiceOver.</td>
+                                    <td>Se usa con las herramientas que la persona ya conoce.</td>
+                                    <td>Coherencia con el entorno y tecnologías de apoyo.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Controles físicos</th>
+                                    <td>Seis botones personalizables y funciones de zoom, desplazamiento, giro e inversión.</td>
+                                    <td>Control directo y adaptable. Según el fabricante, se aprende rápido.</td>
+                                    <td>Control y facilidad de aprendizaje.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tamaño reducido</th>
+                                    <td>Mide 273 × 228 × 16 mm y pesa 1,2 kg.</td>
+                                    <td>Se puede llevar a clase, al trabajo o de viaje.</td>
+                                    <td>Contexto de uso.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dot Apps y Dot Canvas</th>
+                                    <td>Sirven para crear, explorar y compartir contenido táctil.</td>
+                                    <td>La persona también puede crear contenido, no solo recibirlo.</td>
+                                    <td>Interacción en los dos sentidos.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Ficha técnica</h3>
+                    <table>
+                        <caption>Datos principales del Dot Pad X</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Apartado</th>
+                                <th scope="col">Dato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Gráficos táctiles</th>
+                                <td>300 celdas (gráficos y braille en varias líneas)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Línea de braille</th>
+                                <td>20 celdas</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Conexión</th>
+                                <td>USB-C y Bluetooth LE</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Compatibilidad</th>
+                                <td>iOS/iPadOS 15.2 o superior, macOS 13.3 o superior, visionOS 1.0 o superior y Windows con JAWS; también NVDA y VoiceOver</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Controles</th>
+                                <td>6 botones personalizables y navegación táctil</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Medidas y peso</th>
+                                <td>273 × 228 × 16 mm; 1,2 kg</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tecnología</th>
+                                <td>Actuador patentado Dot Actuator 3.0</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Garantía</th>
+                                <td>2 años</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+                <article>
+                    <h3>A quién ayuda</h3>
+                    <ul>
+                        <li><strong>Alumnado de primaria y secundaria:</strong> puede tocar figuras y mapas de matemáticas, ciencias o geografía.</li>
+                        <li><strong>Estudiantes universitarios y de ámbito STEM:</strong> pueden acceder a diagramas y gráficas sin esperar a una versión adaptada.</li>
+                        <li><strong>Docentes y especialistas:</strong> pueden preparar material táctil al momento.</li>
+                        <li><strong>Profesionales:</strong> pueden leer documentos, hojas de cálculo y páginas web en varias líneas.</li>
+                    </ul>
+                </article>
+
+                <article class="fotos">
+                    <h3>Más fotografías</h3>
+
+                    <figure>
+                        <picture>
+                            <source type="image/webp" srcset="imagenes/plano_detalle.webp">
+                            <img src="imagenes/plano_detalle.png" width="1200" height="680" loading="lazy"
+                                 alt="Primer plano de la línea de braille del Dot Pad X: celdas con puntos blancos en relieve y, encima, botones redondeados.">
+                        </picture>
+                        <figcaption>Detalle de la línea de braille, con los puntos en relieve.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="imagenes/vista_lateral.png" width="601" height="600" loading="lazy"
+                             alt="Dot Pad X apoyado en una superficie y visto de lado, con luz de colores al fondo: se ve su carcasa negra y plana.">
+                        <figcaption>En esta vista inclinada se aprecia lo plano que es el aparato.</figcaption>
+                    </figure>
+                </article>
+
+                <aside>
+                    <h3>Qué trae la caja</h3>
+                    <ul>
+                        <li>El Dot Pad X</li>
+                        <li>Funda y carcasa protectora</li>
+                        <li>Cable USB-C a USB-C</li>
+                        <li>Protectores de celdas de repuesto, con destornillador y tornillos</li>
+                        <li>Manual y tarjeta de garantía</li>
+                    </ul>
+                </aside>
+
+                <article>
+                    <h3>Preguntas frecuentes</h3>
+
+                    <details>
+                        <summary>¿Qué lo diferencia de otras pantallas braille?</summary>
+                        <p>Junta en un mismo aparato una zona de gráficos y braille en varias líneas con una fila de braille para texto. Así se puede trabajar con imágenes y con texto a la vez.</p>
+                    </details>
+
+                    <details>
+                        <summary>¿Funciona con móviles y tabletas?</summary>
+                        <p>Sí. Según el fabricante, es compatible con iOS y iPadOS (desde la 15.2), macOS, visionOS y Windows con JAWS, además de NVDA y VoiceOver.</p>
+                    </details>
+
+                    <details>
+                        <summary>¿Es fácil de llevar?</summary>
+                        <p>Pesa 1,2 kg y tiene 16 mm de grosor, así que cabe en una mochila.</p>
+                    </details>
+                </article>
+            </section>
+
+            <section id="evolucion">
+                <h2>Evolución</h2>
+
+                <article>
+                    <h3>Cronología</h3>
+                    <ol>
+                        <li><strong>1829.</strong> Louis Braille publica el sistema de lectura y escritura que lleva su nombre.</li>
+                        <li><strong>Finales del siglo XX.</strong> Aparecen las líneas braille electrónicas: una sola fila de celdas que cambia según el texto de la pantalla.</li>
+                        <li><strong>Años después.</strong> Los lectores de pantalla (JAWS, NVDA, VoiceOver) se convierten en la forma habitual de usar ordenadores y móviles.</li>
+                        <li><strong>Antes del Dot Pad X.</strong> Dot Inc. saca el Dot Pad 320A.</li>
+                        <li><strong>10 de noviembre de 2025.</strong> Dot Inc. presenta el Dot Pad X <sup><a href="#fuente-3" aria-label="Fuente 3">[3]</a></sup>.</li>
+                    </ol>
+                </article>
+
+                <article>
+                    <h3>Qué sustituye o mejora</h3>
+
+                    <div class="tabla-scroll" role="region" aria-labelledby="cap-mejora" tabindex="0">
+                        <table>
+                            <caption id="cap-mejora">Soluciones anteriores, sus límites y qué cambia con el Dot Pad X</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Antes</th>
+                                    <th scope="col">Qué ofrecía</th>
+                                    <th scope="col">Límite</th>
+                                    <th scope="col">Qué cambia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Libros y láminas en relieve</th>
+                                    <td>Texto y dibujos fijos que se tocan.</td>
+                                    <td>Son estáticos, hay que prepararlos antes y suelen tener pocas imágenes.</td>
+                                    <td>El relieve se genera al momento desde cualquier contenido digital.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Línea braille de una fila</th>
+                                    <td>Leer texto en braille con un aparato electrónico.</td>
+                                    <td>Solo enseña una línea y no sirve para gráficos.</td>
+                                    <td>Añade una zona de 300 celdas y mantiene una fila de 20 para el texto.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Lector de pantalla solo con voz</th>
+                                    <td>Lee en voz alta textos y elementos de la interfaz.</td>
+                                    <td>Es secuencial y cuesta captar formas y posiciones.</td>
+                                    <td>Aporta un canal táctil en dos dimensiones que se suma a la voz.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dot Pad 320A</th>
+                                    <td>Pantalla táctil de gráficos y braille de la misma empresa.</td>
+                                    <td>Pines más lentos, con indicadores y firmware menos pulidos.</td>
+                                    <td>Pines más rápidos y suaves, y mejores indicadores y firmware <sup><a href="#fuente-2" aria-label="Fuente 2">[2]</a></sup>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>
+                        <mark>Ojo:</mark> el fabricante dice que el Dot Pad X es hasta diez veces más rápido que la
+                        generación anterior. Es un dato de la propia empresa, no de una medición independiente.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Conclusión</h3>
+                    <p>
+                        Con el Dot Pad X, una persona ciega puede <strong>tocar</strong> una gráfica, un mapa o una
+                        hoja de cálculo cuando aparece en pantalla, y leer texto en braille sin cambiar de aparato.
+                        Antes tenía material impreso y fijo, una sola línea braille o solo voz. Ahora gana rapidez,
+                        autonomía y una forma de explorar la información que respeta cómo está colocada en el espacio.
+                        Desde la IPO, reduce el golfo de evaluación y amplía los canales entre la persona y el sistema.
+                    </p>
+                </article>
+            </section>
+
+            <section id="fuentes">
+                <h2>Fuentes</h2>
+
+                <article>
+                    <h3>Dónde he encontrado la información</h3>
+                    <p>Los datos técnicos vienen de las páginas oficiales de Dot Inc. Las explicaciones están escritas por mí. Los enlaces se abren en una pestaña nueva.</p>
+
+                    <ol>
+                        <li id="fuente-1">
+                            <a href="https://www.dotincorp.com/en/product/dotpadx" target="_blank" rel="noopener">
+                                Ficha técnica del Dot Pad X
+                            </a>
+                        </li>
+                        <li id="fuente-2">
+                            <a href="https://www.dotincorp.com/en/faq" target="_blank" rel="noopener">
+                                Preguntas frecuentes de Dot Inc. y comparación con el Dot Pad 320A
+                            </a>
+                        </li>
+                        <li id="fuente-3">
+                            <a href="https://blog.dotincorp.com/introducing-the-dot-pad-x" target="_blank" rel="noopener">
+                                Presentación del Dot Pad X por Dot Inc. (10 de noviembre de 2025)
+                            </a>
+                        </li>
+                    </ol>
+                </article>
+
+                <article>
+                    <h3>Para saber más</h3>
+                    <p>
+                        Si quieres ampliar la información sobre el producto, puedes ir a la
+                        <a href="https://www.dotincorp.com/en/product/dotpadx" target="_blank" rel="noopener">página oficial del Dot Pad X</a>.
+                    </p>
+                    <p><a href="#inicio">Volver arriba</a></p>
+                </article>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Trabajo IPO | Álvaro Pascual García</p>
+            <address>Interacción Persona–Ordenador</address>
+        </footer>
+    </body>
+</html>
